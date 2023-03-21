@@ -1,0 +1,36 @@
+{
+  "dependencies": {
+    "clipboard": "^2.0.11",
+    "dayjs": "^1.11.5",
+    "uview-plus": "^3.1.13",
+    "vuex": "^4.1.0"
+  },
+  "devDependencies": {
+    "@babel/eslint-parser": "^7.5.4",
+    "@commitlint/cli": "^17.1.2",
+    "@commitlint/config-conventional": "^17.1.0",
+    "@vue/eslint-config-airbnb": "^7.0.0",
+    "cz-conventional-changelog": "^3.3.0",
+    "cz-customizable": "^7.0.0",
+    "eslint": "^8.25.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-vue": "^9.6.0",
+    "husky": "^8.0.0",
+    "lint-staged": "^13.0.3"
+  },
+  "scripts": {
+    "prepare": "husky install",
+    "lint": "eslint --fix --ext .js,.vue pages"
+  },
+  "lint-staged": {
+    "*.{js,vue}": [
+      "npm run lint",
+      "git add"
+    ]
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-customizable"
+    }
+  }
+}
